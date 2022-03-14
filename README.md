@@ -30,9 +30,90 @@ long_window (SMA_Slow) = `100`days
 
 `Classifier model`: SVC from SKLearn's support vector machine (SVM)learning method
 
-![](images/crypto_data.png)
+`Classification report:`
+
+![](Images/SVM3mplot.png)
+
+![](Images/SVM3m.png)
+The baseline model has an `accuracy score` of `0.55` with recall of `0.96` for classification category `1` and `0.04` for classification category`-1`.
+
+The cumulative return plot shows that strategy returns reached `1.5` whereas `actual returns` reached `1.4` in the later period.
+
+### Tuned models and performances:
+
+#### Adjusting the size of the training dataset:
+
+##### `Training data period`: 6 months
+
+![](Images/SVM6mplot.png)
+
+![](Images/SVM6m.png)
+
+##### `Training data period`: 9 months
 
 
+![](Images/SVM9mplot.png)
 
+
+![](Images/SVM9m.png)
+
+
+##### `Training data period`: 11 months
+
+
+![](Images/SVM11m.png)
+
+
+![](Images/SVM11.png)
+
+
+##### What impact resulted from increasing or decreasing the training window?
+
+* By tuning the baseline model by adjusting the size of the training dataset to `6 months`, `9 months` and `11 months` from 3 months, we observe that accuracy score improved by just 1 percent at 6 months but further started dropping on increasing the duartion of training dataset. Also, recall scores did not improve much for classification category `-1` except at 9 months where accuracy score dropped with drop in recall score for classification category `1`.`
+
+* Looking at the plots, it is clear that the cumulative strategy returns also did not surpass actual returns majority of the times.
+
+Thus the 3 months duration of baseline model for training data looks best of all the durations tried above.
+
+
+#### Adjusting the SMA input features:
+
+* (Keeping best period for training dataset- 3 months)
+
+
+#### short_window(SMA_Fast)= 10 days
+
+![](Images/sma_10.png)
+
+![](Images/sma_10_plot.png)
+
+
+#### short_window(SMA_Fast)= 30 days
+
+
+![](Images/sma_30.png)
+
+![](Images/sma_30_plot.png)
+
+#### long_window(SMA_Slow)= 80 days
+
+![](Images/sma_80.png)
+
+![](Images/sma_80_plot.png)
+
+
+#### long_window(SMA_Slow)= 120 days
+
+![](Images/SMA_120.png)
+
+![](Images/SMA_slow_120.png)
+
+#### short_window (SMA_Fast) = 10 days, long_window (SMA_Slow) = 120 days
+
+
+![](Images/SMA10_120.png)
+
+
+![](Images/SMA10-120.png)
 
 
