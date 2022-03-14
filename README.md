@@ -4,7 +4,7 @@
 
 Creating an algorithmic trading system using Python programming and machine learning, that learns and adapts to new data and improving the performance by adjusting the model’s input features to find the parameters that result in the best trading outcomes.
 
-Following steps have been followed:
+Steps followed are as below:
 
 1. Implement an algorithmic trading strategy that uses machine learning to automate the trade decisions establishing a Baseline Performance
 
@@ -15,7 +15,7 @@ Following steps have been followed:
 
 ## Dataset:
 
-The data used is in form of a CSV file contains OHLCV data for an MSCI–based emerging markets ETF that iShares issued  between 2015-01-21 to 2021-01-22.
+The data used is in form of a CSV file contains `OHLCV data` for an `MSCI–based emerging markets ETF` that iShares issued  between `2015-01-21 to 2021-01-22`.
 
 ## Machine learning models and performances:
 
@@ -157,14 +157,16 @@ Keeping the original data as is from the baseline algorithm i.e. training datase
 * The cumulative startegy returns in the new model didnot move in consistence with the actual returns and also dropped as compared to baseline model(SVM) at the later period.
 
 
-### Evaluation Report:
+### Summary Evaluation Report:
 
-The algorthmic trading model was tried with `SVC` and `LogiscticRegression` classifier machine learning models with the baseline parameters.
+The algorthmic trading model was tried with `SVC` and `LogiscticRegression` classifier machine learning models with the baseline parameters i.e. training dataset period of 3 months, SMA short window as 4 days and SMA Long window as 100 days.
 
 The `SVC` baseline model provided `accuracy score` of `0.55` with `recall` of `0.96` for classification category `1` and `0.04` for classification category`-1`.The cumulative return plot shows that `strategy returns` reached `1.5` whereas actual returns reached 1.4 in the later period.
 
 
-The tuned SVC  baseline model with training dataset of 6 months provides the best performance with  accuracy scores(0.56) and improvement in cumulative strategy retruns to 1.8.
+The tuned SVC  baseline model with `training dataset` of `6 months` provides the `best performance` with  `accuracy scores(0.56)` and improvement in `cumulative strategy retruns to 1.8`.
+
+### Best Model:
 
 ![](Images/SVM6mplot.png)
 
@@ -172,7 +174,7 @@ The tuned SVC  baseline model with training dataset of 6 months provides the bes
 ![](Images/SVM6m.png)
 
 
-The `LogiscticRegression` model performed worst with dropped accuracy score  of 0.52 and dropped cumulative strategy returns.
+The `LogiscticRegression` model performed worst with dropped `accuracy score  of 0.52` and dropped cumulative strategy returns.
 
 ## Technologies and Modules
 
