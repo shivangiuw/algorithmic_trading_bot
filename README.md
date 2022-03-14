@@ -30,8 +30,6 @@ long_window (SMA_Slow) = `100`days
 
 `Classifier model`: SVC from SKLearn's support vector machine (SVM)learning method
 
-`Classification report:`
-
 ![](Images/SVM3mplot.png)
 
 ![](Images/SVM3m.png)
